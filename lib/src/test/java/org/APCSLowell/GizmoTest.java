@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import java.io.*;
 
-public class GizmoTester {
+public class GizmoTest {
 
    @Test
    public void partA () {
@@ -17,16 +17,16 @@ public class GizmoTester {
     opm.add(new Gizmo("ABC",true));
     opm.add(new Gizmo("ABC",false));
     int abc = opm.countElectronicsByMaker("ABC");
-    assertEquals(2,abc,partAFail(2,abc,"ABC"));
+    assertEquals(partAFail(2,abc,"ABC"),2,abc);
       
     int lmnop = opm.countElectronicsByMaker("lmnop");
-    assertEquals(0,lmnop,partAFail(0,lmnop,"lmnop"));
+    assertEquals(partAFail(0,lmnop,"lmnop"), 0,lmnop,);
 
     int xyz = opm.countElectronicsByMaker("XYZ");
-    assertEquals(1,xyz,partAFail(1,xyz,"XYZ"));
+    assertEquals(partAFail(1,xyz,"XYZ"),1,xyz);
 
    int qrp = opm.countElectronicsByMaker("QRP");
-    assertEquals(0,qrp,partAFail(0,qrp,"QRP"));
+    assertEquals(partAFail(0,qrp,"QRP"),0,qrp);
    }
 
    @Test
